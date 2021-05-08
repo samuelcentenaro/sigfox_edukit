@@ -125,9 +125,8 @@ void reset_HT() {
 
 int Char2Int(char c){
   int x;
-  if(c >= '0' && c <= '9')
-  {x = x - '0';
-    
+  if(c >= '0' && c <= '9'){
+    x = c - '0';    
   }else if(c >= 'a' && c <= 'f'){
     x = (c - 'a') + 10;
   }else return(-1);
@@ -145,7 +144,7 @@ void delay_msg()
   char buf_aux[60];
 
   digitalWrite(LED, HIGH);
-  Serial.println("Aguarde 45 segundos ou até o LED apagar");
+  Serial.println("Aguarde 45 segundos ou até o LED apagar...");
   uint16_t i;
 
   for(i=0; i<45000;i++){
